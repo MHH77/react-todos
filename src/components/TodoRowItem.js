@@ -1,13 +1,10 @@
-function TodoRowItem() {
+function TodoRowItem(props) {
 
-    const rowNumber = 1;
-    const rowDescription='feed dog';
-    const rowAssigned='Mohammadhosein';
     return (
         <tr>
-            <th scope='row'>{rowNumber}</th>
-            <th>{rowDescription}</th>
-            <th>{rowAssigned}</th>
+            <th scope='row'>{props.rowNumber}</th>
+            <th>{props.rowDescription}</th>
+            <th>{props.rowAssigned}</th>
         </tr>
 
     )
