@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-
+import TodoRowItem from './components/TodoRowItem';
 function App() {
   return (
     <div className='mt-5 container'>
@@ -18,11 +18,7 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope='row'>1</th>
-                <th>Feed dog</th>
-                <th>Mohammadhosein</th>
-              </tr>
+              <TodoRowItem />
               <tr>
                 <th scope='row'>2</th>
                 <th>Get haircut</th>
