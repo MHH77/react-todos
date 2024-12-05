@@ -1,14 +1,28 @@
+import React, { useState } from 'react';
 import './App.css';
 import TodoTable from './components/TodoTable';
 
 function App() {
 
-  const todos = [
-    { rowNumber: 1, rowDescription: 'Work', rowAssigned: 'User One' },
-    { rowNumber: 2, rowDescription: 'Cleaning', rowAssigned: 'User Two' },
-    { rowNumber: 3, rowDescription: 'Driving', rowAssigned: 'User three' },
-    { rowNumber: 4, rowDescription: 'Cooking', rowAssigned: 'User One' }
-  ]
+  const [todos, setTodos] = useState(
+    [
+      { rowNumber: 1, rowDescription: 'Work', rowAssigned: 'User One' },
+      { rowNumber: 2, rowDescription: 'Cleaning', rowAssigned: 'User Two' },
+      { rowNumber: 3, rowDescription: 'Driving', rowAssigned: 'User three' },
+      { rowNumber: 4, rowDescription: 'Cooking', rowAssigned: 'User One' }
+    ]
+  )
+
+  const addTodo = () => {
+    if (todos.length > 0) {
+      const newTodo = {
+        rowNumber: todos.length + 1,
+        rowDescription: 'New Todos',
+        rowAssigned: 'User Three'
+      };
+      setTodos(todos => [...todos, newTodo])
+    }
+  }
 
   return (
     <div className='mt-5 container'>
@@ -18,7 +32,7 @@ function App() {
         </div>
         <div className="card-body">
           <TodoTable todos={todos} />
-          <button className='btn btn-primary'>Add</button>
+          <button className='btn btn-primary' onClick={addTodo}>Add</button>
         </div>
       </div>
     </div>
