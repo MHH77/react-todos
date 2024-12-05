@@ -17,7 +17,8 @@ function App() {
           your todos
         </div>
         <div className="card-body">
-          <TodoTable todos={todos}/>
+          <TodoTable todos={todos} />
+          <button className='btn btn-primary'>Add</button>
         </div>
       </div>
     </div>
