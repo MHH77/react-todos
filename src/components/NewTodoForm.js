@@ -4,14 +4,6 @@ function NewTodoForm() {
     const [description, setDescription] = useState('');
     const [assigned, setAssigned] = useState('');
 
-    const descriptionCahnge = (event) => {
-        console.log(event.target.value);
-    }
-
-    const assignedCahnge = (event) => {
-        console.log(event.target.value);
-    }
-
     return (
         <div className="mt-5">
             <form>
@@ -20,7 +12,7 @@ function NewTodoForm() {
                     <input
                         type="text"
                         className="form-control"
-                        onChange={assignedCahnge}
+                        onChange={event => setAssigned(event.target.value)}
                         required>
                     </input>
                 </div>
@@ -29,7 +21,7 @@ function NewTodoForm() {
                     <textarea
                         className="form-control"
                         rows={3}
-                        onChange={descriptionCahnge}
+                        onChange={event => setDescription(event.target.value)}
                         required>
 
                     </textarea>
