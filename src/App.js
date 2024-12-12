@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import TodoTable from './components/TodoTable';
+import NewTodoForm from './components/NewTodoForm';
 
 function App() {
 
@@ -26,13 +27,14 @@ function App() {
 
   return (
     <div className='mt-5 container'>
-      <div className='card text-center'>
-        <div className='card-header' >
+      <div className='card'>
+        <div className='card-header'>
           your todos
         </div>
         <div className="card-body">
           <TodoTable todos={todos} />
           <button className='btn btn-primary' onClick={addTodo}>Add</button>
+          <NewTodoForm />
         </div>
       </div>
     </div>
