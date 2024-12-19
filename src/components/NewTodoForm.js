@@ -21,6 +21,7 @@ function NewTodoForm(props) {
                         type="text"
                         className="form-control"
                         onChange={event => setAssigned(event.target.value)}
+                        value={assigned}
                         required>
                     </input>
                 </div>
@@ -30,6 +31,7 @@ function NewTodoForm(props) {
                         className="form-control"
                         rows={3}
                         onChange={event => setDescription(event.target.value)}
+                        value={description}
                         required>
                     </textarea>
                 </div>
