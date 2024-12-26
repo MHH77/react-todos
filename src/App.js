@@ -15,14 +15,18 @@ function App() {
   )
 
   const addTodo = (description, assigned) => {
+    let setRowNumber = 0
     if (todos.length > 0) {
-      const newTodo = {
-        rowNumber: todos.length + 1,
-        rowDescription: description,
-        rowAssigned: assigned
-      };
-      setTodos(todos => [...todos, newTodo])
+      setRowNumber = todos[todos.length - 1].rowNumber + 1;
+    } else {
+      setRowNumber = 1;
     }
+    const newTodo = {
+      rowNumber: setRowNumber,
+      rowDescription: description,
+      rowAssigned: assigned
+    };
+    setTodos(todos => [...todos, newTodo])
   }
 
   return (
