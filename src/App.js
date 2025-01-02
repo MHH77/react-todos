@@ -34,6 +34,10 @@ function App() {
     setTodos(filteredTodos);
   };
 
+  const totalrecord = () => {
+    return todos.length;
+  }
+
   return (
     <div className='mt-5 container'>
       <div className='card'>
@@ -42,7 +46,7 @@ function App() {
         </div>
         <div className="card-body">
           <TodoTable todos={todos} deleteTodo={deleteTodo} />
-          <NewTodoForm addTodo={addTodo} />
+          <NewTodoForm addTodo={addTodo} total={totalrecord()} />
         </div>
       </div>
     </div>
