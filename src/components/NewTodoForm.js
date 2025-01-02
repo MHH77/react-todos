@@ -10,6 +10,9 @@ function NewTodoForm(props) {
             setDescription('');
             setAssigned('');
         }
+        else {
+            alert('description and assigned should not be empty!!!');
+        }
     }
 
     return (

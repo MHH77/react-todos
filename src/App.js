@@ -5,14 +5,14 @@ import NewTodoForm from './components/NewTodoForm';
 
 function App() {
 
-  const [todos, setTodos] = useState(
-    [
-      { rowNumber: 1, rowDescription: 'Work', rowAssigned: 'User One' },
-      { rowNumber: 2, rowDescription: 'Cleaning', rowAssigned: 'User Two' },
-      { rowNumber: 3, rowDescription: 'Driving', rowAssigned: 'User three' },
-      { rowNumber: 4, rowDescription: 'Cooking', rowAssigned: 'User One' }
-    ]
-  )
+  const [todos, setTodos] = useState([]);
+  //   [
+  //     { rowNumber: 1, rowDescription: 'Work', rowAssigned: 'User One' },
+  //     { rowNumber: 2, rowDescription: 'Cleaning', rowAssigned: 'User Two' },
+  //     { rowNumber: 3, rowDescription: 'Driving', rowAssigned: 'User three' },
+  //     { rowNumber: 4, rowDescription: 'Cooking', rowAssigned: 'User One' }
+  //   ]
+  // )
 
   const addTodo = (description, assigned) => {
     let setRowNumber = 0
