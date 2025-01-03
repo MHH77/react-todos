@@ -38,6 +38,8 @@ function App() {
     return todos.length;
   }
 
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <div className='mt-5 container'>
       <div className='card'>
@@ -46,7 +48,13 @@ function App() {
         </div>
         <div className="card-body">
           <TodoTable todos={todos} deleteTodo={deleteTodo} />
-          <NewTodoForm addTodo={addTodo} total={totalrecord()} />
+          <button onClick={() => setShowForm(!showForm)} className='btn btn-primary'>
+            Add New Todo's
+          </button>
+          {showForm &&
+            <NewTodoForm addTodo={addTodo} total={totalrecord()} />
+          }
+
         </div>
       </div>
     </div>
